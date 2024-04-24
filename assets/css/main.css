@@ -529,6 +529,30 @@ position: center;
 
 
 
+/* Ajoutez ce CSS dans votre fichier CSS ou dans une balise <style> dans le <head> */
+
+.nav-buttons {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.nav-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-btn i {
+  color: #333;
+}
 
   
   
