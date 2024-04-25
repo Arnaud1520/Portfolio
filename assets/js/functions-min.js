@@ -63,4 +63,65 @@ if (slides.length <= 3) {
 }
 
 
+const slidesOL = document.querySelectorAll(".cardOL");
+const cardsContainerOL = document.querySelector(".cards-container");
+const cardsWrapperOL = document.querySelector(".cards-wrapper-ol");
+let currentSlideOL = 0;
+
+// Fonction pour afficher les slides actuels
+function showSlidesOL() {
+    // Masquer toutes les cartes
+    slidesOL.forEach((slide) => {
+        slide.style.display = "none";
+    });
+
+    // Afficher les 3 prochaines cartes
+    for (let i = currentSlideOL * 3; i < (currentSlideOL * 3) + 3; i++) {
+        if (slidesOL[i]) {
+            slidesOL[i].style.display = "block";
+        }
+    }
+
+    updateNavButtonsOL();
+}
+
+// Afficher les premières 3 cartes au chargement
+showSlidesOL();
+
+// Fonction pour avancer au slide suivant
+function nextSlideOL() {
+    currentSlideOL++;
+    if (currentSlideOL >= Math.ceil(slidesOL.length / 3)) {
+        currentSlideOL = 0; // Retour au début si on est à la fin
+    }
+    showSlidesOL();
+}
+
+// Fonction pour reculer au slide précédent
+function prevSlideOL() {
+    currentSlideOL--;
+    if (currentSlideOL < 0) {
+        currentSlideOL = Math.ceil(slidesOL.length / 3) - 1; // Aller à la fin si on est au début
+    }
+    showSlidesOL();
+}
+
+// Mettre à jour l'état des boutons de navigation
+function updateNavButtonsOL() {
+    // Rien à mettre à jour pour les boutons ronds
+}
+
+// Ajout des écouteurs d'événements pour les boutons
+const nextBtnOL = document.getElementById("nextBtnOL");
+const prevBtnOL = document.getElementById("prevBtnOL");
+
+if (nextBtnOL && prevBtnOL) {
+    nextBtnOL.addEventListener("click", nextSlideOL);
+    prevBtnOL.addEventListener("click", prevSlideOL);
+}
+
+// Masquer les boutons s'il y a moins de 4 cartes
+if (slidesOL.length <= 3) {
+    document.querySelector(".arrow-container").style.display = "none";
+}
 

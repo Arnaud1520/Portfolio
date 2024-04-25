@@ -225,7 +225,7 @@
   .containere {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
   
   .cardOL {
@@ -239,8 +239,8 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     margin-right: 10px; /* Ajout de la marge à droite */
-    margin-bottom: 30px;
-    background: linear-gradient(to bottom left, #6DB3F2 40%, #91EAE4 100%);
+    
+    background: linear-gradient(to bottom left, #3887C7 40%, #7AC3EE 100%);
   }
   
   .cardOL:hover {
@@ -281,6 +281,7 @@
     flex-wrap: wrap;
   
     padding: 50px 0;
+    margin-right: 100px;
   }
   .ag-courses_item {
     -ms-flex-preferred-size: calc(33.33333% - 30px);
@@ -468,6 +469,7 @@ iframe {
   list-style: none;
   margin: 0;
   padding: 0;
+  
 }
 
 .cards_item {
@@ -525,7 +527,7 @@ position: center;
 }
 
 .TitreVeille{
-  margin-top: 140px;
+  margin-top: 50px;
   text-align: center;
 }
 
@@ -557,6 +559,16 @@ position: center;
 }
 
   
-  
+.arrow-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.arrow {
+  display: inline-block;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 0 10px;
+}
   
 
