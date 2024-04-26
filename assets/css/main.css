@@ -527,11 +527,13 @@ position: center;
 }
 
 .TitreVeille{
-  margin-top: 50px;
+  margin-top: 70px;
   text-align: center;
 }
 
-
+.TitreVeille2{
+  text-align: center;
+}
 
 /* Ajoutez ce CSS dans votre fichier CSS ou dans une balise <style> dans le <head> */
 
@@ -572,3 +574,50 @@ position: center;
 }
   
 
+.cartes-conteneur {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carte {
+  background: linear-gradient(to bottom left, #6DB3F2 40%, #91EAE4 100%);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 5px; /* Réduire l'espace intérieur */
+  width: 30%; /* Ajuster la largeur en pourcentage */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.carte img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px; /* Réduire l'espace sous l'image */
+}
+
+.carte h3 {
+  font-size: 18px; /* Réduire la taille du titre */
+  margin-bottom: 8px; /* Réduire l'espace sous le titre */
+  color: white;
+}
+
+.carte p {
+  font-size: 14px; /* Réduire la taille du texte */
+  color: white;
+  margin-bottom: 10px; /* Réduire l'espace sous le texte */
+}
+
+.carte .bouton {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 6px 12px; /* Réduire la taille du bouton */
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-size: 12px; /* Réduire la taille du texte du bouton */
+}
+
+.carte .bouton:hover {
+  background-color: #0056b3;
+}
