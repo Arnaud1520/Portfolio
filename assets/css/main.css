@@ -409,19 +409,7 @@
     }
   }
 
-/* Optionnel : Définir la taille du conteneur */
-.pdf-container {
-  width: 100%;
-  height: 800px; /* Ajustez la hauteur selon vos besoins */
-  
-}
-/* Optionnel : Style pour l'iframe */
-iframe {
-  width: 100%;
-  height: 100%;
-  border: none; /* Pour supprimer la bordure */
-  margin: 100px;
-}
+
 
 
 
