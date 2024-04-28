@@ -62,6 +62,68 @@ if (nextBtnOL && prevBtnOL) {
 
 // Masquer les boutons s'il y a moins de 4 cartes
 if (slidesOL.length <= 3) {
-    document.querySelector(".arrow-container").style.display = "none";
+    document.querySelector(".arrow-container-outils").style.display = "none";
 }
 
+
+//buttons slide veille
+
+const cards = document.querySelectorAll(".carte");
+const cardsContainer = document.querySelector(".cartes-conteneur");
+const nextBtn = document.querySelector(".arrow.right-slider");
+const prevBtn = document.querySelector(".arrow.left-slider");
+let currentSlide = 0;
+
+// Fonction pour afficher les cartes actuelles
+function showCards() {
+    // Cacher toutes les cartes
+    cards.forEach((card) => {
+        card.style.display = "none";
+    });
+
+    // Afficher les 3 cartes actuelles
+    for (let i = currentSlide * 3; i < currentSlide * 3 + 3; i++) {
+        if (cards[i]) {
+            cards[i].style.display = "block";
+        }
+    }
+
+    updateNavButtons();
+}
+
+// Afficher les premières 3 cartes au chargement
+showCards();
+
+// Fonction pour avancer à la slide suivante
+function nextSlide() {
+    currentSlide++;
+    if (currentSlide * 3 >= cards.length) {
+        currentSlide = 0; // Retour au début si on est à la fin
+    }
+    showCards();
+}
+
+// Fonction pour reculer à la slide précédente
+function prevSlide() {
+    currentSlide--;
+    if (currentSlide < 0) {
+        currentSlide = Math.ceil(cards.length / 3) - 1; // Aller à la fin si on est au début
+    }
+    showCards();
+}
+
+// Mettre à jour l'état des boutons de navigation
+function updateNavButtons() {
+    // Rien à mettre à jour pour les boutons ronds
+}
+
+// Ajout des écouteurs d'événements pour les boutons
+if (nextBtn && prevBtn) {
+    nextBtn.addEventListener("click", nextSlide);
+    prevBtn.addEventListener("click", prevSlide);
+}
+
+// Masquer les boutons s'il y a moins de 4 cartes
+if (cards.length <= 3) {
+    document.querySelector(".arrow-container").style.display = "none";
+}

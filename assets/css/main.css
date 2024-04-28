@@ -559,7 +559,7 @@ position: center;
 }
 
   
-.arrow-container {
+.arrow-container-outil {
   text-align: center;
   margin-top: 20px;
 }
@@ -575,6 +575,7 @@ position: center;
 .cartes-conteneur {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .carte {
@@ -618,4 +619,26 @@ position: center;
 
 .carte .bouton:hover {
   background-color: #0056b3;
+}
+
+.arrow-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+}
+
+.arrow-container .arrow {
+  background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 -40px; /* Ajustez la marge horizontale ici */
+}
+
+.arrow-container .arrow:focus {
+  outline: none;
 }
