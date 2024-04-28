@@ -62,7 +62,7 @@ if (nextBtnOL && prevBtnOL) {
 
 // Masquer les boutons s'il y a moins de 4 cartes
 if (slidesOL.length <= 3) {
-    document.querySelector(".arrow-container-outils").style.display = "none";
+    document.querySelector(".arrow-container-outil").style.display = "none";
 }
 
 
