@@ -127,3 +127,47 @@ if (nextBtn && prevBtn) {
 if (cards.length <= 3) {
     document.querySelector(".arrow-container").style.display = "none";
 }
+
+
+//GESTION EXPERIENCE
+document.addEventListener("DOMContentLoaded", function() {
+    const tabs = document.querySelectorAll('.custom-about-tab .nav-link');
+    const tabContents = document.querySelectorAll('.custom-about-tab .tab-pane');
+  
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const targetId = tab.getAttribute('data-target');
+        
+        // Supprimer les classes "active" de tous les onglets
+        tabs.forEach(t => {
+          t.classList.remove('active');
+        });
+        
+        // Ajouter la classe "active" à l'onglet actuellement cliqué
+        tab.classList.add('active');
+  
+        // Masquer tous les contenus des onglets
+        tabContents.forEach(tabContent => {
+          tabContent.classList.remove('show', 'active');
+        });
+        
+        // Afficher le contenu de l'onglet correspondant à l'onglet actuellement cliqué
+        const targetContent = document.querySelector(targetId);
+        if (targetContent) {
+          targetContent.classList.add('show', 'active');
+        }
+      });
+    });
+  });
+  
+  
+  
+
+
+
+
+
+
+  
+  
+  

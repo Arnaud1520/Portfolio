@@ -630,3 +630,75 @@ position: center;
 .arrow-container .arrow:focus {
   outline: none;
 }
+
+/*GESTION EXPERIENCES*/
+
+.custom-about {
+  padding: 100px 0;
+}
+
+.container-custom {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-image-custom {
+  position: relative;
+}
+
+.custom-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.about-image-custom img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.custom-about-content {
+  padding-left: 50px;
+}
+
+.custom-small-title {
+  color: #FF4C29;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.custom-main-title {
+  font-size: 36px;
+  line-height: 46px;
+  margin-bottom: 20px;
+}
+
+.custom-about-tab .nav-link {
+  font-size: 16px;
+  color: #333;
+  border: none;
+  background: transparent;
+  padding: 10px 20px;
+  border-radius: 0;
+}
+
+.custom-about-tab .nav-link.active {
+  color: #FF4C29;
+  border-bottom: 2px solid #FF4C29;
+}
+
+.custom-about-tab .tab-content {
+  padding-top: 20px;
+}
+
+.custom-about-tab .tab-pane {
+  display: none;
+}
+
+.custom-about-tab .tab-pane.active {
+  display: block;
+}
+
+
+
