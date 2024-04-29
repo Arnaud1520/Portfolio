@@ -701,4 +701,24 @@ position: center;
 }
 
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+th {
+  background-color: #0056b3;
+}
+
+iframe {
+  border: none; /* Supprime la bordure */
+  outline: none; /* Supprime tout contour */
+  max-width: 100%; /* Définit une largeur maximale en pourcentage */
+ 
+  
+}
 
