@@ -161,7 +161,23 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   
-  
+  document.addEventListener("DOMContentLoaded", function() {
+    const stage1Link = document.querySelector('#stage1-link');
+    const stage2Link = document.querySelector('#stage2-link');
+    const stage1Section = document.querySelector('#stage1-section');
+    const stage2Section = document.querySelector('#stage2-section');
+
+    stage1Link.addEventListener('click', function() {
+        stage1Section.style.display = 'block';
+        stage2Section.style.display = 'none';
+    });
+
+    stage2Link.addEventListener('click', function() {
+        stage1Section.style.display = 'none';
+        stage2Section.style.display = 'block';
+    });
+});
+
   
   
 
