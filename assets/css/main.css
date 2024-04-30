@@ -744,3 +744,43 @@ a {
   text-decoration: none; /* Supprimer le soulignement */
   color: inherit; /* Utiliser la couleur du texte parent */
 }
+
+/* Apply the above styles only on mobile devices */
+@media only screen and (max-width: 768px) {
+  .l-section.section:nth-child(2) {
+     /* Reduce font size on mobile devices */
+     font-size: 14px;
+   }
+ }
+
+ /* Make the BTS SIO section responsive on mobile devices */
+.l-section.section:nth-child(2) {
+  /* Reduce font size on mobile devices */
+  font-size: 14px;
+}
+
+/* Make the paragraph text wrap on mobile devices */
+.l-section.section:nth-child(2) p {
+  word-wrap: break-word;
+}
+
+/* Remove unnecessary margins and paddings on mobile devices */
+.l-section.section:nth-child(2) ul {
+  margin: 0;
+  padding: 0;
+}
+
+.l-section.section:nth-child(2) li {
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+/* Make the list items display as blocks on mobile devices */
+.l-section.section:nth-child(2) li {
+  display: block;
+}
+
+/* Adjust the list item text alignment on mobile devices */
+.l-section.section:nth-child(2) li strong {
+  text-align: left;
+}
