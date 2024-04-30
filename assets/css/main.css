@@ -634,7 +634,7 @@ position: center;
 /*GESTION EXPERIENCES*/
 
 .custom-about {
-  padding: 100px 0;
+  padding: 10px 0;
 }
 
 .container-custom {
@@ -661,11 +661,20 @@ position: center;
   padding-left: 50px;
 }
 
-.btn-btn-primary {
+.btn-btn-stage1 {
+  color: #FF4C29;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 75px;
+  margin-left: 120px;
+}
+
+.btn-btn-stage2 {
   color: #FF4C29;
   font-size: 14px;
   font-weight: 700;
   margin-top: 70px;
+  margin-left: 10px;
 }
 
 .custom-main-title {
@@ -722,3 +731,16 @@ iframe {
   
 }
 
+@media only screen and (max-width: 600px) {
+  #custom-nav-history {
+    bottom: -200px; /* Ajustez cette valeur selon vos besoins */
+    position: relative;
+    right: 0;
+    z-index: 1; /* Assure que l'iframe est placé au-dessus des autres éléments */
+  }
+}
+
+a {
+  text-decoration: none; /* Supprimer le soulignement */
+  color: inherit; /* Utiliser la couleur du texte parent */
+}
